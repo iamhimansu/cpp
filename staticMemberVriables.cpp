@@ -8,6 +8,8 @@
  *  - Lifetime: throughout the program
  *  - Default value: 0
  *  - They are also known as Class Member Variables
+ *  - Only one copy is created even if the class is not created
+ *  - it should be defined outside of the class as well
  */
 class Amount {
 private:
