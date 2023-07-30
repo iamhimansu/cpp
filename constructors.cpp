@@ -1,6 +1,7 @@
 #include <iostream>
+int ID = 1;
 
-class Book{
+class Book {
 
   /**
    * Constructor makes an object an object
@@ -9,11 +10,13 @@ class Book{
    *    - it is used to solve the problem of initialization
    */
 public:
-  Book(){
-    std::cout << "book initialized" << std::endl;
+  int id{};
+  Book() {
+    this->id = ID++;
+    std::cout << "book initialized with id " << this->id << std::endl;
   }
 };
-int main(){
+int main() {
   Book b1, b2, b3;
 
   return EXIT_SUCCESS;
