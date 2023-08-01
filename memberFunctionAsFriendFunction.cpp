@@ -9,8 +9,6 @@ public:
 };
 
 class B {
-
-
   /*
     friend void A::cout();
     friend void A::cout1();
