@@ -4,7 +4,7 @@ class Complex {
 public:
   int real{}, imaginary{};
 
-private:
+private: //scope does not matter in friend function
   friend Complex operator-(Complex);
 };
 
