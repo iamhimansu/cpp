@@ -81,5 +81,6 @@ public:
  */
 int main() {
   C c;
-  // std::cout << c.a;
+  //   std::cout << c.a;
+  std::cout << sizeof c;
 }
