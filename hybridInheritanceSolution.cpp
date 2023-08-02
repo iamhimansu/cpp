@@ -25,8 +25,8 @@ public:
 
 class C : public B1, B2 {
 public:
-  int i{};  // 4 bytes
-//  char c{}; // compiler added extra padding of 3 bytes for aligning the data
+  int i{}; // 4 bytes
+  //  char c{}; // compiler added extra padding of 3 bytes for aligning the data
   /**
    * When a class or structure contains different data members of various sizes,
    * the compiler may insert padding bytes to align the data members according
@@ -34,6 +34,11 @@ public:
    * the data is more efficient because it can be done in a single memory read
    * operation instead of multiple read operations.
    */
+  int j{}; // here i+j = 8 bytes, so the compiler will not add paddings because
+           // highest size is of 8 bytes and sizeof(i)  + sizeof(j) = 8 bytes
+           // thus i and j will not be promoted to 8 bytes
+  // if @var int j was not there then the compiler would have added extra
+  // padding of 8 bytes
   void echo() { std::cout << "This is class C" << std::endl; }
 };
 
