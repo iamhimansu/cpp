@@ -33,8 +33,8 @@ int main() {
   B2 b2;
 //  std::cout << "Size of A is: " << sizeof(a) << std::endl;
 //  std::cout << "Size of B1 is: " << sizeof(b1) << std::endl;
-//  std::cout << "Size of B2 is: " << sizeof(b2) << std::endl;
-  std::cout << "Size of C is: " << sizeof(c) << std::endl;
+  std::cout << "Size of B2 is: " << sizeof(b2) << std::endl;
+//  std::cout << "Size of C is: " << sizeof(c) << std::endl;
 
   return EXIT_SUCCESS;
 }
