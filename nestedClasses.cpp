@@ -61,6 +61,9 @@ int main() {
     Student s{};
     s.setStudentDetails(18, "HIMANSHU");
     s.address.setAddress(110021, "BAL-105", "DELHI", "DELHI");
+    //The above can be written as
+    //Student::Address.setAddress(,,,);
+    //If Address was a public class
     s.getStudentDetails();
     s.address.getAddress();
     return EXIT_SUCCESS;
