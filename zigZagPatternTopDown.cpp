@@ -19,21 +19,28 @@ int main() {
         }
     }
     /**
-     *  1 2 3 4   8 7 6 5   9 10 11 12   16 15 14 13
+     * 1 2 3 4
+     * 5 6 7 8
+     * 9 10 11 12
+     * 13 14 15 16
+     *
+     * 1 5 9 13
+     * 14 10 6 2
+     * 3 7 11 15
+     * 16 12 8 4
      */
-
-    for (auto &i: array) {
+    for (int column = 0; column < columns; ++column) {
         if (reverse) {
-            for (int j = columns - 1; j >= 0; --j) {
-                std::cout << i[j] << " ";
+            for (int row = rows - 1; row >= 0; --row) {
+                std::cout << array[row][column] << " ";
             }
             reverse = false;
         } else {
-            for (int j = 0; j < columns; ++j) {
-                if (j == columns - 1) {
+            for (int row = 0; row < rows; ++row) {
+                if (row == rows - 1) {
                     reverse = true;
                 }
-                std::cout << i[j] << " ";
+                std::cout << array[row][column] << " ";
             }
         }
         std::cout << std::endl;
